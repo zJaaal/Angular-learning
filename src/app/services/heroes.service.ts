@@ -60,8 +60,14 @@ export class HeroesService {
     return this.heroes;
   }
 
-  getHeroe(idx: string): Heroe {
+  getHero(idx: string): Heroe {
     return this.heroes[Number(idx)];
+  }
+
+  searchHero(text: string) {
+    return this.heroes.filter(
+      (hero) => hero.nombre.toLowerCase().indexOf(text) >= 0
+    );
   }
 }
 
