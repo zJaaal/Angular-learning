@@ -1,1 +1,16 @@
-<p>heroe works!</p>
+<h1>
+  {{ hero!.nombre }} <small>{{ hero!.aparicion }}</small>
+</h1>
+<hr />
+
+<div class="row">
+  <div class="col-md-4">
+    <img class="img-fluid" [src]="hero.img" [alt]="hero.nombre" />
+  </div>
+  <div class="col-md-8">
+    <h3>{{ hero.nombre }}</h3>
+    <hr />
+    <p>{{ hero.bio }}</p>
+    <div>{{ hero.casa }}</div>
+  </div>
+</div>
