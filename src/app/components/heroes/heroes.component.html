@@ -2,7 +2,10 @@
 <hr />
 
 <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
-  <div class="col animated fadeIn fast" *ngFor="let heroe of heroes">
+  <div
+    class="col animated fadeIn fast"
+    *ngFor="let heroe of heroes; let i = index"
+  >
     <div class="card">
       <img
         [src]="heroe.img"
@@ -19,7 +22,14 @@
             {{ heroe.aparicion }}
           </small>
         </p>
-        <button class="btn btn-outline-primary btn-block">Ver mas...</button>
+        <div class="d-grid">
+          <button
+            class="btn btn-outline-primary btn-block"
+            (click)="verHeroe(i)"
+          >
+            Ver mas...
+          </button>
+        </div>
       </div>
     </div>
   </div>
