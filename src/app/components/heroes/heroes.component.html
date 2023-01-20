@@ -2,5 +2,5 @@
 <hr />
 
 <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
-  <app-hero-card [heroe]="heroe" [idx]="i" *ngFor="let heroe of heroes; let i = index" />
+  <app-hero-card (selectedHero)="navigateToHero( $event )" [heroe]="heroe" [idx]="i" *ngFor="let heroe of heroes; let i = index" />
 </div>
