@@ -64,7 +64,7 @@ export class HeroesService {
     return this.heroes[Number(idx)];
   }
 
-  searchHero(text: string) {
+  searchHeroes(text: string) {
     return this.heroes.filter(
       (hero) => hero.nombre.toLowerCase().indexOf(text) >= 0
     );

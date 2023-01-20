@@ -1,1 +1,16 @@
-<p>search works!</p>
+<div
+  *ngIf="!heroes.length"
+  class="d-flex flex-column justify-content-center align-items-center"
+>
+  <h3>No pudimos encontrar nada por: {{ text }}</h3>
+  <img src="assets/img/A-64.png" alt="App Logo" />
+</div>
+<div *ngIf="heroes.length">
+  <h1>
+    Resultados de: <small>{{ text }}</small>
+  </h1>
+  <hr />
+  <div class="row row-cols-1 row-cols-md-3 g-4 py-4">
+    <app-hero-card [heroe]="heroe" [idx]="i" *ngFor="let heroe of heroes; let i = index" />
+  </div>
+</div>
