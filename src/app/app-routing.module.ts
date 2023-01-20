@@ -4,6 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
     path: 'heroe/:id',
     component: HeroeComponent,
   },
+  { path: 'search/:text', component: SearchComponent },
   {
     path: '**',
     pathMatch: 'full',
